@@ -10,6 +10,7 @@
 #include "util/threadpool_imp.h"
 #include <algorithm>
 #include <atomic>
+#include <cstdlib>
 
 #ifndef OS_WIN
 #  include <unistd.h>
