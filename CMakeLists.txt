@@ -4,7 +4,7 @@ OWNER(alexbykov)
 
 PEERDIR(
     contrib/libs/libbz2
-    contrib/libs/lz4
+    ads/dmlc/deps/lz4
     contrib/libs/lua
     contrib/libs/snappy
     contrib/libs/zlib
@@ -13,7 +13,6 @@ PEERDIR(
 
 ADDINCL(
     contrib/libs/gtest
-    contrib/libs/lz4
     contrib/libs/lua/lua-5.2.0/src
     contrib/libs/snappy
     contrib/libs/zstd08
@@ -26,7 +25,7 @@ NO_WERROR()
 CFLAGS(
     -DROCKSDB_PLATFORM_POSIX
     -DROCKSDB_LIB_IO_POSIX
-    -DSNAPPY
+    -DLZ4
     -DOS_LINUX
 )
 
@@ -186,7 +185,6 @@ SRCS(
     utilities/env_registry.cc
     utilities/geodb/geodb_impl.cc
     utilities/leveldb_options/leveldb_options.cc
-    utilities/lua/rocks_lua_compaction_filter.cc
     utilities/memory/memory_util.cc
     utilities/merge_operators/put.cc
     utilities/merge_operators/max.cc
