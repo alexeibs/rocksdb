@@ -9,7 +9,7 @@
 
 #include "util/clock_cache.h"
 
-#ifndef SUPPORT_CLOCK_CACHE
+#if 1 //ndef SUPPORT_CLOCK_CACHE
 
 namespace rocksdb {
 
@@ -28,7 +28,7 @@ std::shared_ptr<Cache> NewClockCache(size_t capacity, int num_shard_bits,
 #include <deque>
 #include <limits>
 
-#include "tbb/concurrent_hash_map.h"
+//#include "tbb/concurrent_hash_map.h"
 
 #include "port/port.h"
 #include "util/autovector.h"
